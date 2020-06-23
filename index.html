@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Sass Task</title>
+</head>
+<body>
+    <div class="container text-center p-5">
+      <h1 class="pb-3">Top 10 most affected Covid Countries... </h1>
+      <img src="covid_img.jpg" class="pb-5"/>
+      <div class="row">
+        <div class="col-sm-4"><b>Country Name</b></div>
+        <div class="col-sm-4"><b>Covid Cases</b></div>
+        <div class="col-sm-4"><b>No. of Deaths</b> </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">USA</div>
+        <div class="col-sm-4">2.32M</div>
+        <div class="col-sm-4"> 122,107</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Brazil</div>
+        <div class="col-sm-4">1.09M</div>
+        <div class="col-sm-4"> 50,659</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Russia</div>
+        <div class="col-sm-4">592K</div>
+        <div class="col-sm-4"> 8,206</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">India</div>
+        <div class="col-sm-4">440K</div>
+        <div class="col-sm-4"> 14,019</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">UK</div>
+        <div class="col-sm-4">304K</div>
+        <div class="col-sm-4">42,632 </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Peru</div>
+        <div class="col-sm-4">255K</div>
+        <div class="col-sm-4">8,045 </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Spain</div>
+        <div class="col-sm-4">246K</div>
+        <div class="col-sm-4"> 28,322</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Chile</div>
+        <div class="col-sm-4">242K</div>
+        <div class="col-sm-4">4,479 </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Italy</div>
+        <div class="col-sm-4">208K</div>
+        <div class="col-sm-4"> 9,742</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">Iran</div>
+        <div class="col-sm-4">238K</div>
+        <div class="col-sm-4"> 34,634</div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <h3> Is it helpful ?</h3>
+      <button class="btn btn-success m-3" id="yes_btn"> Yes </button>
+      <button class="btn btn-danger m-3" id="no_btn">No</button>
+      <h3 id="thanks" class="p-3"></h3>
+    </div>
+    
+    <button id="change_theme_btn"> Change Theme </button>
+
+    <script type="text/javascript">
+      document.getElementById('change_theme_btn').addEventListener('click', function () {
+        let darkThemeEnabled = document.body.classList.toggle('dark-theme');
+        localStorage.setItem('dark-theme-enabled', darkThemeEnabled);
+      });
+
+      if (JSON.parse(localStorage.getItem('dark-theme-enabled'))) {
+        document.body.classList.add('dark-theme');
+      }
+      document.getElementById('yes_btn').addEventListener('click', function () {
+        document.getElementById("thanks").innerHTML = "Thanks a lot !!!";
+      });
+      document.getElementById('no_btn').addEventListener('click', function () {
+        document.getElementById("thanks").innerHTML = "Thank you... We will improve the results !!!";
+      });
+    </script>
+</body>
+</html>
