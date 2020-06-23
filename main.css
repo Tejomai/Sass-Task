@@ -7,9 +7,6 @@ body {
     color: #fff; }
     body.dark-theme .col-sm-4 {
       border: 2px solid #00ffaa; }
-  .covid_toggle body {
-    background-color: #333;
-    color: #fff; }
 
 .col-sm-4 {
   border: 2px solid #330a91;
